@@ -10,7 +10,7 @@ async function main() {
   const provider = new JsonRpcProvider(testnetConnection);
   const module = await provider.getNormalizedMoveModule({
     package: "0xbc3f8e53ab0656ceea692f1e1f292064e586b2b2c9b136d661d8ef636ce726d9",
-    module: "admin_operation",
+    module: "admin_operation", // "coin_operation", "object_operation"
   });
   console.log(module);
   console.log("Data Fields: ", module.structs.UpdatePermission);
